@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +21,14 @@
             --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
         }
 
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             min-height: 100vh;
@@ -31,10 +38,25 @@
             font-family: var(--sans);
             -webkit-font-smoothing: antialiased;
         }
-        button, a { font: inherit; }
-        button { color: inherit; }
-        a { color: inherit; }
-        .page { width: min(100%, 1040px); margin: 0 auto; padding: 0 22px; }
+
+        button,
+        a {
+            font: inherit;
+        }
+
+        button {
+            color: inherit;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page {
+            width: min(100%, 1040px);
+            margin: 0 auto;
+            padding: 0 22px;
+        }
 
         .topbar {
             display: flex;
@@ -42,9 +64,29 @@
             align-items: center;
             justify-content: space-between;
         }
-        .wordmark { display: flex; align-items: center; gap: 9px; color: var(--rose-dark); font-family: var(--serif); font-size: 19px; font-weight: 700; }
-        .wordmark-heart { color: var(--rose); font-family: var(--sans); font-size: 20px; }
-        .top-note { color: var(--muted); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }
+
+        .wordmark {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--rose-dark);
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .wordmark-heart {
+            color: var(--rose);
+            font-family: var(--sans);
+            font-size: 20px;
+        }
+
+        .top-note {
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
 
         .hero {
             position: relative;
@@ -59,7 +101,9 @@
                 radial-gradient(ellipse at 50% 110%, rgba(224, 171, 159, .25), transparent 54%),
                 linear-gradient(145deg, #f8e9e3 0%, #fdf6f1 57%, #f2dfdd 100%);
         }
-        .hero::before, .hero::after {
+
+        .hero::before,
+        .hero::after {
             position: absolute;
             width: 340px;
             height: 340px;
@@ -67,12 +111,47 @@
             border-radius: 50%;
             content: "";
         }
-        .hero::before { top: -238px; left: -145px; box-shadow: 0 0 0 24px rgba(179,84,100,.025), 0 0 0 50px rgba(179,84,100,.02); }
-        .hero::after { right: -215px; bottom: -250px; width: 440px; height: 440px; box-shadow: 0 0 0 30px rgba(179,84,100,.025); }
-        .hero-content { position: relative; z-index: 1; max-width: 620px; }
-        .hero-kicker, .section-kicker { color: var(--rose); font-size: 10px; font-weight: 750; letter-spacing: .2em; text-transform: uppercase; }
-        .hero-kicker { margin: 0 0 19px; }
-        h1, h2, h3, p { overflow-wrap: break-word; }
+
+        .hero::before {
+            top: -238px;
+            left: -145px;
+            box-shadow: 0 0 0 24px rgba(179, 84, 100, .025), 0 0 0 50px rgba(179, 84, 100, .02);
+        }
+
+        .hero::after {
+            right: -215px;
+            bottom: -250px;
+            width: 440px;
+            height: 440px;
+            box-shadow: 0 0 0 30px rgba(179, 84, 100, .025);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 620px;
+        }
+
+        .hero-kicker,
+        .section-kicker {
+            color: var(--rose);
+            font-size: 10px;
+            font-weight: 750;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+        }
+
+        .hero-kicker {
+            margin: 0 0 19px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            overflow-wrap: break-word;
+        }
+
         h1 {
             margin: 0;
             color: var(--rose-dark);
@@ -82,8 +161,21 @@
             letter-spacing: -.055em;
             line-height: .99;
         }
-        h1 em { color: var(--rose); font-weight: 400; }
-        .hero-subtitle { max-width: 405px; margin: 22px auto 0; color: #765f58; font-family: var(--serif); font-size: 17px; line-height: 1.7; }
+
+        h1 em {
+            color: var(--rose);
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            max-width: 405px;
+            margin: 22px auto 0;
+            color: #765f58;
+            font-family: var(--serif);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
         .hero-button {
             display: inline-flex;
             min-height: 48px;
@@ -96,14 +188,22 @@
             border-radius: 999px;
             color: white;
             background: var(--rose);
-            box-shadow: 0 8px 20px rgba(132,60,75,.16);
+            box-shadow: 0 8px 20px rgba(132, 60, 75, .16);
             font-size: 13px;
             font-weight: 650;
             text-decoration: none;
             transition: transform .2s, background .2s;
         }
-        .hero-button:hover { transform: translateY(-2px); background: var(--rose-dark); }
-        .hero-button svg { width: 16px; height: 16px; }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+            background: var(--rose-dark);
+        }
+
+        .hero-button svg {
+            width: 16px;
+            height: 16px;
+        }
 
         .song-section {
             max-width: 620px;
@@ -113,17 +213,38 @@
             border-radius: 20px;
             background: rgba(255, 253, 251, .8);
         }
-        .song-section .section-kicker { margin: 0 0 8px; }
-        .song-section h2 { margin: 0 0 15px; color: var(--rose-dark); font-family: var(--serif); font-size: 23px; }
-        .song-player { display: block; width: 100%; height: 152px; border: 0; border-radius: 12px; }
+
+        .song-section .section-kicker {
+            margin: 0 0 8px;
+        }
+
+        .song-section h2 {
+            margin: 0 0 15px;
+            color: var(--rose-dark);
+            font-family: var(--serif);
+            font-size: 23px;
+        }
+
+        .song-player {
+            display: block;
+            width: 100%;
+            height: 152px;
+            border: 0;
+            border-radius: 12px;
+        }
 
         .intro {
             max-width: 610px;
             margin: 94px auto 45px;
             text-align: center;
         }
-        .intro .section-kicker { margin: 0 0 15px; }
-        .intro h2, .closing h2 {
+
+        .intro .section-kicker {
+            margin: 0 0 15px;
+        }
+
+        .intro h2,
+        .closing h2 {
             margin: 0;
             color: var(--rose-dark);
             font-family: var(--serif);
@@ -132,7 +253,13 @@
             letter-spacing: -.04em;
             line-height: 1.1;
         }
-        .intro p:last-child { margin: 15px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+
+        .intro p:last-child {
+            margin: 15px 0 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
 
         .memory-section {
             margin-bottom: 88px;
@@ -142,12 +269,14 @@
             background: rgba(255, 253, 251, .78);
             box-shadow: 0 18px 50px rgba(91, 54, 47, .055);
         }
+
         .year-tabs {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 8px;
             margin-bottom: 23px;
         }
+
         .year-tab {
             min-height: 58px;
             padding: 8px 6px;
@@ -158,18 +287,74 @@
             cursor: pointer;
             transition: color .2s, background .2s, border-color .2s;
         }
-        .year-tab span { display: block; }
-        .year-tab .year-tab-number { font-family: var(--serif); font-size: 20px; }
-        .year-tab .year-tab-caption { margin-top: 3px; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
-        .year-tab:hover { background: #fbf0ec; }
-        .year-tab.active { border-color: #efd7d6; color: var(--rose-dark); background: #f8e9e6; }
-        .year-tab:focus-visible, .slide-arrow:focus-visible, .dot:focus-visible, .hero-button:focus-visible { outline: 3px solid #d58b96; outline-offset: 3px; }
 
-        .memory-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin: 0 2px 17px; }
-        .memory-heading .section-kicker { margin: 0 0 6px; font-size: 9px; }
-        .memory-heading h2 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 27px; font-weight: 500; letter-spacing: -.03em; }
-        .slide-count { padding-bottom: 3px; color: var(--muted); font-size: 11px; white-space: nowrap; }
-        .slide-count strong { color: var(--rose-dark); font-weight: 700; }
+        .year-tab span {
+            display: block;
+        }
+
+        .year-tab .year-tab-number {
+            font-family: var(--serif);
+            font-size: 20px;
+        }
+
+        .year-tab .year-tab-caption {
+            margin-top: 3px;
+            font-size: 9px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .year-tab:hover {
+            background: #fbf0ec;
+        }
+
+        .year-tab.active {
+            border-color: #efd7d6;
+            color: var(--rose-dark);
+            background: #f8e9e6;
+        }
+
+        .year-tab:focus-visible,
+        .slide-arrow:focus-visible,
+        .dot:focus-visible,
+        .hero-button:focus-visible {
+            outline: 3px solid #d58b96;
+            outline-offset: 3px;
+        }
+
+        .memory-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 0 2px 17px;
+        }
+
+        .memory-heading .section-kicker {
+            margin: 0 0 6px;
+            font-size: 9px;
+        }
+
+        .memory-heading h2 {
+            margin: 0;
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 27px;
+            font-weight: 500;
+            letter-spacing: -.03em;
+        }
+
+        .slide-count {
+            padding-bottom: 3px;
+            color: var(--muted);
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .slide-count strong {
+            color: var(--rose-dark);
+            font-weight: 700;
+        }
 
         .photo-frame {
             position: relative;
@@ -181,32 +366,133 @@
             border-radius: 20px;
             background: linear-gradient(145deg, #ead0c6, #f7e8df 48%, #ddbbc0);
         }
-        .photo-frame::before, .photo-frame::after {
+
+        .photo-frame::before,
+        .photo-frame::after {
             position: absolute;
             width: 180px;
             height: 180px;
-            border: 1px solid rgba(255,255,255,.42);
+            border: 1px solid rgba(255, 255, 255, .42);
             border-radius: 50%;
             content: "";
         }
-        .photo-frame::before { top: -105px; right: -48px; box-shadow: 0 0 0 17px rgba(255,255,255,.12), 0 0 0 35px rgba(255,255,255,.08); }
-        .photo-frame::after { bottom: -145px; left: -60px; width: 250px; height: 250px; }
-        .photo-frame.has-photo { background: #e5d2c9; }
-        .slide-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s; }
-        .photo-frame.has-photo .slide-photo { opacity: 1; }
-        .photo-placeholder { position: relative; z-index: 1; display: grid; justify-items: center; gap: 12px; padding: 20px; color: rgba(92, 57, 56, .72); text-align: center; }
-        .photo-placeholder svg { width: 39px; height: 39px; opacity: .7; }
-        .photo-placeholder strong { font-family: var(--serif); font-size: 18px; font-weight: 500; }
-        .photo-placeholder span { font-size: 11px; line-height: 1.6; }
-        .photo-frame.has-photo .photo-placeholder { display: none; }
-        .photo-shade { position: absolute; z-index: 1; inset: 35% 0 0; display: none; background: linear-gradient(transparent, rgba(29, 16, 17, .5)); pointer-events: none; }
-        .photo-frame.has-photo .photo-shade { display: block; }
-        .photo-overlay-caption { position: absolute; z-index: 2; right: 21px; bottom: 18px; left: 21px; display: none; color: white; font-family: var(--serif); font-size: 18px; text-shadow: 0 1px 8px rgba(0,0,0,.24); }
-        .photo-frame.has-photo .photo-overlay-caption { display: block; }
 
-        .slide-info { display: flex; min-height: 68px; align-items: center; justify-content: space-between; gap: 14px; padding: 17px 2px 11px; }
-        .slide-caption { margin: 0; color: #66514a; font-family: var(--serif); font-size: 16px; line-height: 1.45; }
-        .slide-controls { display: flex; flex: 0 0 auto; gap: 8px; }
+        .photo-frame::before {
+            top: -105px;
+            right: -48px;
+            box-shadow: 0 0 0 17px rgba(255, 255, 255, .12), 0 0 0 35px rgba(255, 255, 255, .08);
+        }
+
+        .photo-frame::after {
+            bottom: -145px;
+            left: -60px;
+            width: 250px;
+            height: 250px;
+        }
+
+        .photo-frame.has-photo {
+            background: #e5d2c9;
+        }
+
+        .slide-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .photo-frame.has-photo .slide-photo {
+            opacity: 1;
+        }
+
+        .photo-placeholder {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            justify-items: center;
+            gap: 12px;
+            padding: 20px;
+            color: rgba(92, 57, 56, .72);
+            text-align: center;
+        }
+
+        .photo-placeholder svg {
+            width: 39px;
+            height: 39px;
+            opacity: .7;
+        }
+
+        .photo-placeholder strong {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .photo-placeholder span {
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .photo-frame.has-photo .photo-placeholder {
+            display: none;
+        }
+
+        .photo-shade {
+            position: absolute;
+            z-index: 1;
+            inset: 35% 0 0;
+            display: none;
+            background: linear-gradient(transparent, rgba(29, 16, 17, .5));
+            pointer-events: none;
+        }
+
+        .photo-frame.has-photo .photo-shade {
+            display: block;
+        }
+
+        .photo-overlay-caption {
+            position: absolute;
+            z-index: 2;
+            right: 21px;
+            bottom: 18px;
+            left: 21px;
+            display: none;
+            color: white;
+            font-family: var(--serif);
+            font-size: 18px;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, .24);
+        }
+
+        .photo-frame.has-photo .photo-overlay-caption {
+            display: block;
+        }
+
+        .slide-info {
+            display: flex;
+            min-height: 68px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 17px 2px 11px;
+        }
+
+        .slide-caption {
+            margin: 0;
+            color: #66514a;
+            font-family: var(--serif);
+            font-size: 16px;
+            line-height: 1.45;
+        }
+
+        .slide-controls {
+            display: flex;
+            flex: 0 0 auto;
+            gap: 8px;
+        }
+
         .slide-arrow {
             display: grid;
             width: 39px;
@@ -219,14 +505,58 @@
             cursor: pointer;
             transition: color .2s, background .2s, border-color .2s;
         }
-        .slide-arrow:hover { border-color: var(--rose); color: white; background: var(--rose); }
-        .slide-arrow svg { width: 16px; height: 16px; }
-        .slide-dots { display: flex; justify-content: center; gap: 7px; padding-top: 4px; }
-        .dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #e6d8d1; cursor: pointer; transition: width .2s, background .2s; }
-        .dot.active { width: 21px; border-radius: 9px; background: var(--rose); }
 
-        .year-note { margin: 21px 0 0; padding: 18px 19px; border-left: 2px solid #d99ba0; border-radius: 0 13px 13px 0; background: #fbf3ef; }
-        .year-note p { margin: 0; color: #765f58; font-family: var(--serif); font-size: 15px; font-style: italic; line-height: 1.7; }
+        .slide-arrow:hover {
+            border-color: var(--rose);
+            color: white;
+            background: var(--rose);
+        }
+
+        .slide-arrow svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .slide-dots {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+            padding-top: 4px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: #e6d8d1;
+            cursor: pointer;
+            transition: width .2s, background .2s;
+        }
+
+        .dot.active {
+            width: 21px;
+            border-radius: 9px;
+            background: var(--rose);
+        }
+
+        .year-note {
+            margin: 21px 0 0;
+            padding: 18px 19px;
+            border-left: 2px solid #d99ba0;
+            border-radius: 0 13px 13px 0;
+            background: #fbf3ef;
+        }
+
+        .year-note p {
+            margin: 0;
+            color: #765f58;
+            font-family: var(--serif);
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.7;
+        }
 
         .closing {
             position: relative;
@@ -236,48 +566,180 @@
             text-align: center;
             background: linear-gradient(145deg, #f4e3df, #faeee8);
         }
-        .closing .section-kicker { margin: 0 0 14px; }
-        .closing h2 { font-size: clamp(34px, 7vw, 52px); }
-        .closing p:last-of-type { max-width: 460px; margin: 15px auto 0; color: #765f58; font-family: var(--serif); font-size: 16px; line-height: 1.75; }
-        .signature { margin-top: 22px; color: var(--rose); font-family: var(--serif); font-size: 23px; font-style: italic; }
-        footer { padding: 7px 0 28px; color: #a28c83; font-size: 10px; letter-spacing: .09em; text-align: center; text-transform: uppercase; }
+
+        .closing .section-kicker {
+            margin: 0 0 14px;
+        }
+
+        .closing h2 {
+            font-size: clamp(34px, 7vw, 52px);
+        }
+
+        .closing p:last-of-type {
+            max-width: 460px;
+            margin: 15px auto 0;
+            color: #765f58;
+            font-family: var(--serif);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .signature {
+            margin-top: 22px;
+            color: var(--rose);
+            font-family: var(--serif);
+            font-size: 23px;
+            font-style: italic;
+        }
+
+        footer {
+            padding: 7px 0 28px;
+            color: #a28c83;
+            font-size: 10px;
+            letter-spacing: .09em;
+            text-align: center;
+            text-transform: uppercase;
+        }
 
         @media (min-width: 720px) {
-            .page { padding-right: 34px; padding-left: 34px; }
-            .hero { min-height: 550px; border-radius: 38px; }
-            .memory-section { padding: 34px; }
-            .year-tab { min-height: 66px; }
-            .memory-heading { margin-bottom: 20px; }
-            .photo-frame { max-height: 500px; }
+            .page {
+                padding-right: 34px;
+                padding-left: 34px;
+            }
+
+            .hero {
+                min-height: 550px;
+                border-radius: 38px;
+            }
+
+            .memory-section {
+                padding: 34px;
+            }
+
+            .year-tab {
+                min-height: 66px;
+            }
+
+            .memory-heading {
+                margin-bottom: 20px;
+            }
+
+            .photo-frame {
+                max-height: 500px;
+            }
         }
+
         @media (max-width: 420px) {
-            .page { padding-right: 14px; padding-left: 14px; }
-            .topbar { min-height: 62px; }
-            .top-note { font-size: 9px; }
-            .hero { min-height: 420px; padding: 58px 19px; border-radius: 24px; }
-            .hero-subtitle { font-size: 15px; }
-            .song-section { margin-top: 24px; padding: 18px; }
-            .song-section h2 { font-size: 21px; }
-            .intro { margin: 72px auto 34px; }
-            .memory-section { margin-bottom: 70px; padding: 17px 14px; border-radius: 22px; }
-            .year-tabs { gap: 3px; margin-bottom: 20px; }
-            .year-tab { min-height: 53px; border-radius: 12px; }
-            .year-tab .year-tab-number { font-size: 18px; }
-            .year-tab .year-tab-caption { font-size: 8px; letter-spacing: .04em; }
-            .memory-heading h2 { font-size: 24px; }
-            .photo-frame { min-height: 195px; border-radius: 16px; }
-            .slide-info { min-height: 66px; gap: 8px; }
-            .slide-caption { font-size: 14px; }
-            .slide-arrow { width: 35px; height: 35px; }
-            .year-note { padding: 15px; }
-            .year-note p { font-size: 14px; }
-            .closing { padding: 49px 18px 53px; border-radius: 22px; }
+            .page {
+                padding-right: 14px;
+                padding-left: 14px;
+            }
+
+            .topbar {
+                min-height: 62px;
+            }
+
+            .top-note {
+                font-size: 9px;
+            }
+
+            .hero {
+                min-height: 420px;
+                padding: 58px 19px;
+                border-radius: 24px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .song-section {
+                margin-top: 24px;
+                padding: 18px;
+            }
+
+            .song-section h2 {
+                font-size: 21px;
+            }
+
+            .intro {
+                margin: 72px auto 34px;
+            }
+
+            .memory-section {
+                margin-bottom: 70px;
+                padding: 17px 14px;
+                border-radius: 22px;
+            }
+
+            .year-tabs {
+                gap: 3px;
+                margin-bottom: 20px;
+            }
+
+            .year-tab {
+                min-height: 53px;
+                border-radius: 12px;
+            }
+
+            .year-tab .year-tab-number {
+                font-size: 18px;
+            }
+
+            .year-tab .year-tab-caption {
+                font-size: 8px;
+                letter-spacing: .04em;
+            }
+
+            .memory-heading h2 {
+                font-size: 24px;
+            }
+
+            .photo-frame {
+                min-height: 195px;
+                border-radius: 16px;
+            }
+
+            .slide-info {
+                min-height: 66px;
+                gap: 8px;
+            }
+
+            .slide-caption {
+                font-size: 14px;
+            }
+
+            .slide-arrow {
+                width: 35px;
+                height: 35px;
+            }
+
+            .year-note {
+                padding: 15px;
+            }
+
+            .year-note p {
+                font-size: 14px;
+            }
+
+            .closing {
+                padding: 49px 18px 53px;
+                border-radius: 22px;
+            }
         }
+
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="page">
         <header class="topbar">
@@ -293,10 +755,14 @@
                 <div class="hero-content">
                     <p class="hero-kicker">Four years of us · and counting</p>
                     <h1>Honey,<br><em>Happy Anniversary!</em></h1>
-                    <p class="hero-subtitle">Four years of laughter, little adventures, and choosing each other. Here's to all the moments that made us <span aria-label="heart">♥</span>.</p>
+                    <p class="hero-subtitle">Four years of laughter, little adventures, and choosing each other. Here's
+                        to all the moments that made us <span aria-label="heart">♥</span>.</p>
                     <a class="hero-button" href="#memories">
                         Take a little trip with me
-                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </a>
                 </div>
             </section>
@@ -304,12 +770,9 @@
             <section class="song-section" aria-labelledby="song-title">
                 <p class="section-kicker">Our song</p>
                 <h2 id="song-title">“We Fell in Love in October” · girl in red</h2>
-                <iframe
-                    class="song-player"
-                    title="Spotify player for We Fell in Love in October by girl in red"
+                <iframe class="song-player" title="Spotify player for We Fell in Love in October by girl in red"
                     src="https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                 </iframe>
             </section>
 
@@ -319,20 +782,44 @@
             </section>
 
             <section class="memory-section" aria-label="Browse our memories by year">
-                
 
+                <div class="year-tabs" role="tablist" aria-label="Anniversary years">
+                    <button class="year-tab active" id="year-tab-1" type="button" role="tab" aria-selected="true"
+                        aria-controls="year-panel" data-year="0">
+                        <span class="year-tab-number">01</span><span class="year-tab-caption">The beginning</span>
+                    </button>
+                    <button class="year-tab" id="year-tab-2" type="button" role="tab" aria-selected="false"
+                        aria-controls="year-panel" tabindex="-1" data-year="1">
+                        <span class="year-tab-number">02</span><span class="year-tab-caption">Growing together</span>
+                    </button>
+                    <button class="year-tab" id="year-tab-3" type="button" role="tab" aria-selected="false"
+                        aria-controls="year-panel" tabindex="-1" data-year="2">
+                        <span class="year-tab-number">03</span><span class="year-tab-caption">Our kind of magic</span>
+                    </button>
+                    <button class="year-tab" id="year-tab-4" type="button" role="tab" aria-selected="false"
+                        aria-controls="year-panel" tabindex="-1" data-year="3">
+                        <span class="year-tab-number">04</span><span class="year-tab-caption">Still choosing you</span>
+                    </button>
+                </div>
                 <div id="year-panel" role="tabpanel" aria-labelledby="year-tab-1" tabindex="0">
                     <div class="memory-heading">
                         <div>
                             <p class="section-kicker" id="year-kicker">Chapter one</p>
                             <h2 id="year-title">The beginning</h2>
                         </div>
-                        <span class="slide-count"><strong id="slide-current">01</strong> / <span id="slide-total">03</span></span>
+                        <span class="slide-count"><strong id="slide-current">01</strong> / <span
+                                id="slide-total">03</span></span>
                     </div>
                     <div class="photo-frame" id="photo-frame">
                         <img class="slide-photo" id="slide-photo" src="12022.jpg" alt="">
                         <div class="photo-placeholder" id="photo-placeholder">
-                            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m9 34 11-10 7 6 5-4 7 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <rect x="7" y="9" width="34" height="30" rx="5" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <circle cx="18" cy="20" r="3" stroke="currentColor" stroke-width="1.5" />
+                                <path d="m9 34 11-10 7 6 5-4 7 6" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <strong>Your first-year memories go here</strong>
                             <span>Add photos by updating the image paths<br>in the memories list in this page.</span>
                         </div>
@@ -340,39 +827,38 @@
                         <span class="photo-overlay-caption" id="photo-overlay-caption"></span>
                     </div>
                     <div class="slide-info">
-                        <p class="slide-caption" id="slide-caption" aria-live="polite">That first little adventure together.</p>
+                        <p class="slide-caption" id="slide-caption" aria-live="polite">That first little adventure
+                            together.</p>
                         <div class="slide-controls">
                             <button class="slide-arrow" id="previous-slide" type="button" aria-label="Previous memory">
-                                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4m5 5-5-5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                    <path d="M16 10H4m5 5-5-5 5-5" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </button>
                             <button class="slide-arrow" id="next-slide" type="button" aria-label="Next memory">
-                                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                    <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </button>
                         </div>
                     </div>
                     <div class="slide-dots" id="slide-dots" aria-label="Choose a memory"></div>
-                    <blockquote class="year-note"><p id="year-note">Year 2022-2023 was the year we really started to build our life together.</p></blockquote>
+                    <blockquote class="year-note">
+                        <p id="year-note">Year 2022-2023 was the year we really started to build our life together.</p>
+                    </blockquote>
                 </div>
-                <div class="year-tabs" role="tablist" aria-label="Anniversary years">
-                    <button class="year-tab active" id="year-tab-1" type="button" role="tab" aria-selected="true" aria-controls="year-panel" data-year="0">
-                        <span class="year-tab-number">01</span><span class="year-tab-caption">The beginning</span>
-                    </button>
-                    <button class="year-tab" id="year-tab-2" type="button" role="tab" aria-selected="false" aria-controls="year-panel" tabindex="-1" data-year="1">
-                        <span class="year-tab-number">02</span><span class="year-tab-caption">Growing together</span>
-                    </button>
-                    <button class="year-tab" id="year-tab-3" type="button" role="tab" aria-selected="false" aria-controls="year-panel" tabindex="-1" data-year="2">
-                        <span class="year-tab-number">03</span><span class="year-tab-caption">Our kind of magic</span>
-                    </button>
-                    <button class="year-tab" id="year-tab-4" type="button" role="tab" aria-selected="false" aria-controls="year-panel" tabindex="-1" data-year="3">
-                        <span class="year-tab-number">04</span><span class="year-tab-caption">Still choosing you</span>
-                    </button>
-                </div>
+
             </section>
 
             <section class="closing">
                 <p class="section-kicker">Babi,</p>
                 <h2>Happy 4th Anniversary!</h2>
-                <p>Thank you for making these four years the happiest, unforgettable moments of my life. We may have misunderstanding but I will always choose and love you. 4 years with you and I'm so grateful. More years to come babap, Iloveyouuuu v much! Let's enjoy our day together. I'll make bawi soon my love, Iloveyouuu!</p>
+                <p>Thank you for making these four years the happiest, unforgettable moments of my life. We may have
+                    misunderstanding but I will always choose and love you. 4 years with you and I'm so grateful. More
+                    years to come babap, Iloveyouuuu v much! Let's enjoy our day together. I'll make bawi soon my love,
+                    Iloveyouuu!</p>
                 <div class="signature">All my love, always <span aria-hidden="true">♥</span></div>
             </section>
         </main>
@@ -518,4 +1004,5 @@
         showSlide();
     </script>
 </body>
+
 </html>
